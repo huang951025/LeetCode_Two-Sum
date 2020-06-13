@@ -1,0 +1,31 @@
+//Author Wei Wen Huang
+// Date:6/12/2020
+
+class Solution {
+	public static void main(String[] args) {
+	    int [] nums = {2,7,11,15};
+	    int target = 9;
+
+        twoSum(nums, target);
+
+	}
+    
+    public static int[] twoSum(int[] nums, int target) {
+        int[] sum = new int [2];
+        int sums = 0;
+	
+        	for(int i = 0;i<nums.length; i++) {
+        		for(int j = i+1; j<nums.length; j++) {
+        			sums = nums[i] + nums[j];
+        			if(sums == target) {
+        				sum[0] = i;
+        				sum[1] = j;
+        			    
+        				return sum;
+        			}
+        		}
+        	}// end for loop
+        	System.out.print("can not find match");
+        	return sum;
+    }
+}        
